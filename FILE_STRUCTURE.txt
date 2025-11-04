@@ -1,0 +1,173 @@
+═══════════════════════════════════════════════════════════════
+  DAR AL BITCOIN - FILE STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+📁 dar-al-bitcoin/
+│
+├── 📁 public/                          Static files
+│   └── bitcoin-icon.svg                Favicon icon
+│
+├── 📁 src/                             Source code
+│   │
+│   ├── 📁 components/                  Reusable components
+│   │   │
+│   │   ├── 📁 home/                    Homepage sections
+│   │   │   ├── HeroSection.jsx         Main hero with CTA
+│   │   │   ├── ProblemSection.jsx      3-column problem layout
+│   │   │   ├── ComparisonSection.jsx   FIAT vs Bitcoin
+│   │   │   ├── WhyUsSection.jsx        Mission & pillars
+│   │   │   ├── TrainingSection.jsx     Course modules
+│   │   │   ├── BlogSection.jsx         Latest articles
+│   │   │   ├── EventsSection.jsx       Upcoming events
+│   │   │   ├── TestimonialsSection.jsx Reviews carousel
+│   │   │   ├── NewsletterSection.jsx   Email signup
+│   │   │   └── FinalCTA.jsx            Final conversion
+│   │   │
+│   │   ├── Header.jsx                  Navigation menu
+│   │   └── Footer.jsx                  Site footer
+│   │
+│   ├── 📁 pages/                       Page components
+│   │   ├── Home.jsx                    Homepage (10 sections)
+│   │   ├── About.jsx                   About page
+│   │   ├── Formation.jsx               Training page
+│   │   ├── Blog.jsx                    Blog listing
+│   │   ├── Events.jsx                  Events page
+│   │   └── Contact.jsx                 Contact page
+│   │
+│   ├── 📁 styles/                      Stylesheets
+│   │   └── index.css                   Global styles + Tailwind
+│   │
+│   ├── 📁 assets/                      Images, fonts, etc.
+│   │   └── (empty - add your images here)
+│   │
+│   ├── 📁 utils/                       Utility functions
+│   │   └── (empty - add helpers here)
+│   │
+│   ├── App.jsx                         Main app component
+│   └── main.jsx                        Entry point
+│
+├── 📄 index.html                       HTML entry point
+├── 📄 package.json                     Dependencies
+├── 📄 vite.config.js                   Vite configuration
+├── 📄 tailwind.config.js               Tailwind configuration
+├── 📄 postcss.config.js                PostCSS configuration
+├── 📄 .gitignore                       Git ignore rules
+│
+├── 📘 README.md                        Project overview
+├── 📘 QUICK_START.md                   Setup guide
+├── 📘 DEPLOYMENT.md                    Deployment guide
+├── 📘 PROJECT_SUMMARY.md               Complete summary
+├── 📘 CHECKLIST.md                     Launch checklist
+├── 📘 WHAT_YOU_GOT.md                  Delivery summary
+├── 📘 INSTALL.txt                      Simple installation
+└── 📘 FILE_STRUCTURE.txt               This file
+
+═══════════════════════════════════════════════════════════════
+
+📊 STATISTICS
+═══════════════════════════════════════════════════════════════
+
+Total Files:        35+
+React Components:   18
+Pages:              6
+Documentation:      8
+Configuration:      5
+
+Lines of Code:      ~5,000+
+Components:         Fully reusable
+Documentation:      Comprehensive
+Status:             Production ready
+
+═══════════════════════════════════════════════════════════════
+
+🎯 KEY FILES TO KNOW
+═══════════════════════════════════════════════════════════════
+
+START HERE:
+  📘 INSTALL.txt              Simple setup instructions
+  📘 QUICK_START.md           Detailed setup guide
+
+CUSTOMIZE:
+  📁 src/pages/               Edit page content
+  📁 src/components/home/     Edit homepage sections
+  📄 tailwind.config.js       Change colors/styles
+
+DEPLOY:
+  📘 DEPLOYMENT.md            How to deploy
+  📘 CHECKLIST.md             Pre-launch checklist
+
+REFERENCE:
+  📘 README.md                Project overview
+  📘 PROJECT_SUMMARY.md       Complete details
+  📘 WHAT_YOU_GOT.md          What's included
+
+═══════════════════════════════════════════════════════════════
+
+📝 FILE DESCRIPTIONS
+═══════════════════════════════════════════════════════════════
+
+CONFIGURATION FILES:
+  package.json          → Dependencies and scripts
+  vite.config.js        → Build tool configuration
+  tailwind.config.js    → Styling configuration
+  postcss.config.js     → CSS processing
+  .gitignore            → Git ignore rules
+
+SOURCE FILES:
+  src/main.jsx          → Application entry point
+  src/App.jsx           → Main app with routing
+  src/components/       → Reusable UI components
+  src/pages/            → Page components
+  src/styles/           → Global styles
+
+DOCUMENTATION:
+  README.md             → Project overview
+  QUICK_START.md        → Setup instructions
+  DEPLOYMENT.md         → Deployment guide
+  PROJECT_SUMMARY.md    → Complete project details
+  CHECKLIST.md          → Launch checklist
+  WHAT_YOU_GOT.md       → Delivery summary
+  INSTALL.txt           → Simple installation
+  FILE_STRUCTURE.txt    → This file
+
+═══════════════════════════════════════════════════════════════
+
+🔧 HOW TO USE
+═══════════════════════════════════════════════════════════════
+
+1. READ:
+   Start with INSTALL.txt or QUICK_START.md
+
+2. INSTALL:
+   npm install
+
+3. RUN:
+   npm run dev
+
+4. CUSTOMIZE:
+   Edit files in src/pages/ and src/components/
+
+5. DEPLOY:
+   Follow DEPLOYMENT.md
+
+═══════════════════════════════════════════════════════════════
+
+💡 TIPS
+═══════════════════════════════════════════════════════════════
+
+✓ Keep this structure - it's organized for easy maintenance
+✓ Add your images to src/assets/
+✓ Add utility functions to src/utils/
+✓ Follow the existing naming conventions
+✓ Read the documentation before making changes
+✓ Test after every change
+
+═══════════════════════════════════════════════════════════════
+
+🎉 READY TO START!
+═══════════════════════════════════════════════════════════════
+
+Everything is organized and ready to use.
+Start with INSTALL.txt and you'll be running in minutes!
+
+═══════════════════════════════════════════════════════════════
