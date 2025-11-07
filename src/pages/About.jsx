@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Users, Shield, Heart, Target, Lightbulb } from 'lucide-react'
+import { BookOpen, Users, Shield, Heart, Target, MapPin, Clock, Award } from 'lucide-react'
 
 const About = () => {
   const ref = useRef(null)
@@ -106,33 +106,286 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-800">
-        <div className="container-custom text-center">
+      {/* Events Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
+            className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+              Événements à Venir
+            </h2>
+          </motion.div>
+
+          <div className="space-y-8 max-w-5xl mx-auto">
+            {[
+              {
+                date: { day: '15', month: 'DÉC', year: '2024' },
+                title: 'Webinaire : Bitcoin, est-ce vraiment Halal?',
+                type: 'Webinaire',
+                description: 'Débat avec des savants et experts en finance islamique. Questions/réponses en direct avec la communauté.',
+                location: 'En ligne (Zoom)',
+                time: '20h00 - 22h00 CET',
+                spots: 'Places illimitées',
+                price: 'Gratuit',
+                image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80'
+              },
+              {
+                date: { day: '20', month: 'JAN', year: '2025' },
+                title: 'Atelier Pratique : Sécuriser vos Bitcoin',
+                type: 'Atelier',
+                description: 'Formation hands-on sur le self-custody. Apportez votre ordinateur et repartez avec votre premier wallet sécurisé.',
+                location: 'Bruxelles, Belgique',
+                time: '14h00 - 18h00',
+                spots: '15 places restantes / 30',
+                price: '49€',
+                image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&q=80'
+              },
+              {
+                date: { day: '10', month: 'FÉV', year: '2025' },
+                title: 'Conférence : L\'Avenir de la Finance Islamique avec Bitcoin',
+                type: 'Conférence',
+                description: 'Intervenants experts en finance islamique et Bitcoin. Networking et discussions approfondies.',
+                location: 'Paris, France',
+                time: '10h00 - 17h00',
+                spots: 'Complet (liste d\'attente)',
+                price: '99€',
+                image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80'
+              }
+            ].map((event, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ y: -5 }}
+                className="card overflow-hidden"
+              >
+                <div className="grid md:grid-cols-[200px_1fr] gap-0">
+                  <div className="relative">
+                    <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-bitcoin-500/90 to-bitcoin-600/90 flex flex-col items-center justify-center text-white">
+                      <span className="text-5xl font-bold">{event.date.day}</span>
+                      <span className="text-xl font-semibold uppercase">{event.date.month}</span>
+                      <span className="text-sm">{event.date.year}</span>
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <span className="inline-block bg-bitcoin-500/10 text-bitcoin-500 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                      {event.type}
+                    </span>
+                    <h3 className="text-2xl font-outfit font-bold text-navy-900 mb-4">{event.title}</h3>
+                    <p className="text-gray-600 mb-6">{event.description}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="flex items-center space-x-3 text-gray-700">
+                        <MapPin size={20} className="text-bitcoin-500" />
+                        <span>{event.location}</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-gray-700">
+                        <Clock size={20} className="text-bitcoin-500" />
+                        <span>{event.time}</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-gray-700">
+                        <Users size={20} className="text-bitcoin-500" />
+                        <span>{event.spots}</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-2xl font-bold text-bitcoin-500">{event.price}</span>
+                      </div>
+                    </div>
+                    <a href="mailto:contact@daralbitcoin.com">
+                      <motion.button whileHover={{ scale: 1.02 }} className="btn-primary w-full md:w-auto">
+                        S'inscrire maintenant
+                      </motion.button>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl font-outfit font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-6xl font-outfit font-bold text-navy-900 mb-6">
+              Pourquoi Dar Al Bitcoin Existe
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Nous avons constaté que la communauté musulmane connaît déjà le monde des cryptomonnaies, 
+              mais avec une compréhension infectée par la culture du casino et de la spéculation.
+            </p>
+            <p className="text-xl text-navy-900 font-semibold max-w-4xl mx-auto mt-4">
+              Notre mission : Corriger cette vision et vous montrer que Bitcoin n'est pas un gadget, 
+              mais une réponse islamique à un problème réel.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: BookOpen,
+                title: 'Éducation',
+                description: 'Nous formons la communauté musulmane à comprendre :',
+                points: [
+                  'Le problème du Riba dans le système FIAT',
+                  'La différence entre Bitcoin et "la crypto"',
+                  'Comment utiliser Bitcoin en toute sécurité'
+                ]
+              },
+              {
+                icon: Users,
+                title: 'Communauté',
+                description: 'Nous créons un espace d\'échange entre musulmans conscients des enjeux de souveraineté financière et désireux d\'adopter des solutions conformes aux principes islamiques.'
+              },
+              {
+                icon: Shield,
+                title: 'Recherche',
+                description: 'Nous publions des analyses sur l\'intersection entre finance islamique, Bitcoin, et souveraineté monétaire pour élever le niveau de compréhension.'
+              }
+            ].map((pillar, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="card p-8 text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-bitcoin-500 to-bitcoin-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transform hover:rotate-12 transition-transform duration-300">
+                  <pillar.icon className="text-white" size={40} />
+                </div>
+                <h3 className="text-2xl font-outfit font-bold text-navy-900 mb-4">
+                  {pillar.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {pillar.description}
+                </p>
+                {pillar.points && (
+                  <ul className="text-left space-y-2">
+                    {pillar.points.map((point, i) => (
+                      <li key={i} className="flex items-start space-x-2">
+                        <span className="text-bitcoin-500 mt-1">•</span>
+                        <span className="text-gray-700 text-sm">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center"
+          >
+            <Link to="/formation">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary"
+              >
+                Commencer ma formation
+              </motion.button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Past Events */}
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+              Événements Passés
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              { title: 'Meetup Bitcoin & Islam - Bruxelles', date: 'Octobre 2024', attendees: 45, image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80' },
+              { title: 'Webinaire : Introduction à Bitcoin', date: 'Septembre 2024', attendees: 120, image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80' }
+            ].map((event, index) => (
+              <motion.div key={index} initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: index * 0.2 }} whileHover={{ y: -5 }} className="card overflow-hidden">
+                <div className="relative h-48">
+                  <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm mb-1">{event.date}</p>
+                    <h3 className="text-xl font-bold">{event.title}</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center space-x-2 text-gray-600">
+                    <Users size={20} className="text-bitcoin-500" />
+                    <span>{event.attendees} participants</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Host Event CTA */}
+      <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-800">
+        <div className="container-custom">
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="max-w-3xl mx-auto text-center">
+            <Award className="w-16 h-16 text-bitcoin-400 mx-auto mb-6" />
+            <h2 className="text-4xl font-outfit font-bold text-white mb-6">
+              Organiser un Événement Dar Al Bitcoin dans Votre Ville
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Vous souhaitez organiser un meetup, une conférence ou un atelier Dar Al Bitcoin dans votre ville? Contactez-nous!
+            </p>
+            <div className="bg-navy-800/50 backdrop-blur-sm border border-bitcoin-500/30 rounded-2xl p-8 mb-8">
+              <h3 className="text-xl font-bold text-white mb-4">Nous fournissons:</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>✓ Support organisationnel</li>
+                <li>✓ Matériel de formation</li>
+                <li>✓ Promotion</li>
+                <li>✓ Intervenant (si possible)</li>
+              </ul>
+            </div>
+            <a href="mailto:contact@daralbitcoin.com">
+              <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
+                Proposer un événement
+              </motion.button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-custom text-center">
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : {}}>
+            <h2 className="text-4xl font-outfit font-bold text-navy-900 mb-8">
               Rejoignez notre mission
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/formation">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="btn-primary"
-                >
+                <motion.button whileHover={{ scale: 1.05 }} className="btn-primary">
                   Commencer la formation
                 </motion.button>
               </Link>
-              <Link to="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="btn-secondary"
-                >
+              <a href="mailto:contact@daralbitcoin.com">
+                <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
                   Nous contacter
                 </motion.button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

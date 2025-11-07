@@ -49,12 +49,12 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-outfit font-extrabold text-white mb-6 leading-tight">
-              Libérez-vous du{' '}
-              <span className="text-gradient">Riba</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-outfit font-extrabold text-white mb-6 leading-tight">
+              Comprends et adopte le{' '}
+              <span className="text-gradient">bitcoin</span>
               <br />
-              Adoptez{' '}
-              <span className="text-gradient">Bitcoin</span>
+              de manière{' '}
+              <span className="text-gradient">éthique</span>
             </h1>
           </motion.div>
 

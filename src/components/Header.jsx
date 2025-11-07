@@ -19,8 +19,9 @@ const Header = () => {
     { name: 'Accueil', path: '/' },
     { name: 'Qui Sommes-Nous?', path: '/qui-sommes-nous' },
     { name: 'Formation', path: '/formation' },
+    { name: 'Événements', path: '/evenements' },
     { 
-      name: 'Blog', 
+      name: 'Actualités', 
       path: '/blog',
       dropdown: [
         { name: 'Finance Islamique', path: '/blog/finance-islamique' },
@@ -29,8 +30,6 @@ const Header = () => {
         { name: 'Actualités Bitcoin', path: '/blog/actualites' },
       ]
     },
-    { name: 'Événements', path: '/evenements' },
-    { name: 'Contact', path: '/contact' },
   ]
 
   return (

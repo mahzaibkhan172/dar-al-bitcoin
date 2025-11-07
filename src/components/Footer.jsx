@@ -8,9 +8,7 @@ const Footer = () => {
       { name: 'Accueil', path: '/' },
       { name: 'Qui Sommes-Nous?', path: '/qui-sommes-nous' },
       { name: 'Formation', path: '/formation' },
-      { name: 'Blog', path: '/blog' },
-      { name: 'Événements', path: '/evenements' },
-      { name: 'Contact', path: '/contact' },
+      { name: 'Actualités', path: '/blog' },
     ],
     resources: [
       { name: 'Articles phares', path: '/blog' },
@@ -62,39 +60,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Navigation */}
-          <div>
-            <h4 className="font-outfit font-bold text-lg mb-6">Navigation</h4>
-            <ul className="space-y-3">
-              {footerLinks.navigation.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-400 hover:text-bitcoin-400 transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Column 2: Empty (was Navigation) */}
+          <div></div>
 
-          {/* Column 3: Resources */}
-          <div>
-            <h4 className="font-outfit font-bold text-lg mb-6">Ressources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-400 hover:text-bitcoin-400 transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Column 3: Empty (was Ressources) */}
+          <div></div>
 
           {/* Column 4: Contact */}
           <div>

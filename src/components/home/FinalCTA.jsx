@@ -109,7 +109,7 @@ const FinalCTA = () => {
                 <span>Commencer la formation maintenant</span>
               </motion.button>
             </Link>
-            <Link to="/contact">
+            <a href="mailto:contact@daralbitcoin.com">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -118,7 +118,7 @@ const FinalCTA = () => {
                 <Phone size={24} />
                 <span>Réserver un appel découverte</span>
               </motion.button>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Trust Indicators */}

@@ -51,7 +51,7 @@ const BlogSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-outfit font-bold text-navy-900 mb-6">
-            Nos Derniers Articles
+            Nos Dernières Actualités
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Approfondissez votre compréhension avec nos analyses
@@ -121,7 +121,7 @@ const BlogSection = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
-              Accéder au blog complet
+              Voir toutes les actualités
             </motion.button>
           </Link>
         </motion.div>

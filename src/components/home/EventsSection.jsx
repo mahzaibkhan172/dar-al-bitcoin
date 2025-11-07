@@ -116,7 +116,7 @@ const EventsSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
-          <Link to="/evenements">
+          <Link to="/qui-sommes-nous">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

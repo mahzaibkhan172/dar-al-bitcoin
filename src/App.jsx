@@ -6,7 +6,6 @@ import About from './pages/About'
 import Formation from './pages/Formation'
 import Blog from './pages/Blog'
 import Events from './pages/Events'
-import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
           <Route path="/formation" element={<Formation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/evenements" element={<Events />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
