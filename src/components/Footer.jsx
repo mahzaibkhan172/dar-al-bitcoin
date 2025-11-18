@@ -20,10 +20,8 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: Send, name: 'Telegram', url: 'https://t.me/daralbitcoin' },
-    { icon: Twitter, name: 'Twitter', url: 'https://twitter.com/DarAlBitcoin' },
-    { icon: Youtube, name: 'YouTube', url: 'https://youtube.com/@daralbitcoin' },
-    { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/daralbitcoin' },
+    { icon: Twitter, name: 'Twitter', url: 'https://twitter.com/Amgad_Khafagy' },
+    { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/dar.al.bitcoin' },
   ]
 
   return (
@@ -71,11 +69,11 @@ const Footer = () => {
             <h4 className="font-outfit font-bold text-lg mb-6">Contact</h4>
             <div className="space-y-4">
               <a
-                href="mailto:contact@daralbitcoin.com"
+                href="mailto:daralbitcoin.pro@gmail.com"
                 className="flex items-center space-x-3 text-gray-400 hover:text-bitcoin-400 transition-colors"
               >
                 <Mail size={20} />
-                <span>contact@daralbitcoin.com</span>
+                <span>daralbitcoin.pro@gmail.com</span>
               </a>
               <a
                 href="https://t.me/daralbitcoin"
@@ -105,7 +103,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-          <p>© 2024 Dar Al Bitcoin. Tous droits réservés.</p>
+          <p>© 2025 Dar Al Bitcoin. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/mentions-legales" className="hover:text-bitcoin-400 transition-colors">
               Mentions légales

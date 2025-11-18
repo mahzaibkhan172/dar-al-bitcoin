@@ -6,6 +6,8 @@ import About from './pages/About'
 import Formation from './pages/Formation'
 import Blog from './pages/Blog'
 import Events from './pages/Events'
+import LegalNotice from './pages/LegalNotice'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/formation" element={<Formation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/evenements" element={<Events />} />
+          <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

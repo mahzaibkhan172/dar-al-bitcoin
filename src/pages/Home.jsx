@@ -1,22 +1,27 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { CheckCircle, Lock, Globe, Users, BookOpen, Shield, TrendingUp, AlertCircle, Zap, Award, Calendar, ArrowRight, Star } from 'lucide-react'
 import HeroSection from '../components/home/HeroSection'
+import AboutSection from '../components/home/AboutSection'
+import ProblemDetailSection from '../components/home/ProblemDetailSection'
 import ProblemSection from '../components/home/ProblemSection'
 import ComparisonSection from '../components/home/ComparisonSection'
+import JoinedMovementSection from '../components/home/JoinedMovementSection'
+import FormationSection from '../components/home/FormationSection'
 import BlogSection from '../components/home/BlogSection'
 import TestimonialsSection from '../components/home/TestimonialsSection'
-import NewsletterSection from '../components/home/NewsletterSection'
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <HeroSection />
+      <AboutSection />
+      <ProblemDetailSection />
       <ProblemSection />
       <ComparisonSection />
+      <JoinedMovementSection />
+      <FormationSection />
       <BlogSection />
       <TestimonialsSection />
-      <NewsletterSection />
     </div>
   )
 }

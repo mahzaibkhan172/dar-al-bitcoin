@@ -5,7 +5,7 @@ import { CheckCircle, Lock, Globe, Users, Play, BookOpen } from 'lucide-react'
 const HeroSection = () => {
   const trustElements = [
     { icon: CheckCircle, text: 'Conforme aux principes islamiques' },
-    { icon: BookOpen, text: 'Formation certifiée' },
+    { icon: BookOpen, text: 'Formateur certifié' },
     { icon: Lock, text: 'Souveraineté financière' },
     { icon: Users, text: 'Communauté active' },
   ]
@@ -50,11 +50,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-outfit font-extrabold text-white mb-6 leading-tight">
-              Comprends et adopte le{' '}
-              <span className="text-gradient">bitcoin</span>
-              <br />
-              de manière{' '}
-              <span className="text-gradient">éthique</span>
+              C'est quoi{' '}
+              <span className="text-gradient">Bitcoin</span> ?
             </h1>
           </motion.div>
 
@@ -63,17 +60,34 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed"
           >
-            Dar Al Bitcoin vous aide à comprendre Bitcoin non pas comme un gadget technologique, 
-            mais comme <span className="text-bitcoin-400 font-semibold">LA solution islamique</span> à un problème fondamental.
+            Ce n'est pas une mode, ni un outil de spéculation, mais une révolution technologique qui s'attaque à la racine d'un mal profond : le système de la monnaie-dette fondé sur le riba.
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed"
+          >
+            Bitcoin, c'est l'arme pacifique la plus puissante pour sortir du riba systémique, reprendre le contrôle de notre richesse et rebâtir une véritable finance islamique.
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Dar Al Bitcoin vous aide à comprendre les enjeux, vous former en profondeur et adopter cette révolution monétaire en toute sérénité.
           </motion.p>
 
           {/* Arabic Quote */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="bg-navy-800/50 backdrop-blur-sm border border-gold-500/30 rounded-2xl p-8 mb-12 max-w-3xl mx-auto"
           >
             <p className="arabic-text text-3xl md:text-4xl mb-4 leading-relaxed">
