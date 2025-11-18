@@ -85,19 +85,7 @@ const Footer = () => {
                 <span>Communauté Telegram</span>
               </a>
             </div>
-            <div className="mt-6">
-              <h5 className="font-semibold mb-3">Newsletter</h5>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Votre email"
-                  className="flex-1 px-4 py-2 bg-navy-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-bitcoin-500"
-                />
-                <button className="bg-bitcoin-500 px-4 py-2 rounded-r-lg hover:bg-bitcoin-600 transition-colors">
-                  <Send size={20} />
-                </button>
-              </div>
-            </div>
+
           </div>
         </div>
 
