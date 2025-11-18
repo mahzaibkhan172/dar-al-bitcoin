@@ -1,11 +1,24 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Calendar, MapPin, Clock, Users } from 'lucide-react'
+import EventRegistrationModal from '../components/EventRegistrationModal'
 
 const Events = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const [selectedEvent, setSelectedEvent] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = (event) => {
+    setSelectedEvent(event)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedEvent(null)
+  }
 
   const events = [
     {
@@ -119,9 +132,10 @@ const Events = () => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={() => openModal(event)}
                         className="bg-bitcoin-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-bitcoin-600 transition-colors"
                       >
-                        S'inscrire
+                        S'inscrire maintenant
                       </motion.button>
                     </div>
                   </div>
@@ -131,6 +145,13 @@ const Events = () => {
           </div>
         </div>
       </section>
+
+      {/* Registration Modal */}
+      <EventRegistrationModal 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        event={selectedEvent}
+      />
     </div>
   )
 }

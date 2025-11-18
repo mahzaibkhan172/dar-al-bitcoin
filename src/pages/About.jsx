@@ -1,12 +1,25 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BookOpen, Users, Shield, Heart, Target, MapPin, Clock, Award } from 'lucide-react'
+import EventRegistrationModal from '../components/EventRegistrationModal'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+  const [selectedEvent, setSelectedEvent] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = (event) => {
+    setSelectedEvent(event)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedEvent(null)
+  }
 
   const values = [
     { icon: Heart, title: 'Honnêteté Intellectuelle', desc: 'Nous ne cachons rien. Bitcoin a des avantages mais aussi des défis. Nous en parlons ouvertement.' },
@@ -194,11 +207,13 @@ const About = () => {
                         <span className="text-2xl font-bold text-bitcoin-500">{event.price}</span>
                       </div>
                     </div>
-                    <a href="mailto:contact@daralbitcoin.com">
-                      <motion.button whileHover={{ scale: 1.02 }} className="btn-primary w-full md:w-auto">
-                        S'inscrire maintenant
-                      </motion.button>
-                    </a>
+                    <motion.button 
+                      whileHover={{ scale: 1.02 }} 
+                      onClick={() => openModal(event)}
+                      className="btn-primary w-full md:w-auto"
+                    >
+                      S'inscrire maintenant
+                    </motion.button>
                   </div>
                 </div>
               </motion.div>
@@ -390,6 +405,13 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Registration Modal */}
+      <EventRegistrationModal 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        event={selectedEvent}
+      />
     </div>
   )
 }
