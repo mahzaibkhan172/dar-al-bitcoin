@@ -10,6 +10,7 @@ const BlogSection = () => {
 
   const posts = [
     {
+      id: 1,
       category: 'Finance Islamique',
       categoryColor: 'bg-blue-500',
       title: 'Pourquoi la Banque Centrale est un Système de Riba',
@@ -20,6 +21,7 @@ const BlogSection = () => {
       date: '15 Nov 2024'
     },
     {
+      id: 2,
       category: 'Bitcoin & Islam',
       categoryColor: 'bg-bitcoin-500',
       title: 'Bitcoin et la Zakât : Comment Calculer l\'Aumône sur vos BTC',
@@ -30,6 +32,7 @@ const BlogSection = () => {
       date: '12 Nov 2024'
     },
     {
+      id: 3,
       category: 'Actualités',
       categoryColor: 'bg-green-500',
       title: 'Pourquoi l\'Adoption de Bitcoin Accélère dans les Pays Musulmans',
@@ -60,14 +63,14 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {posts.map((post, index) => (
-            <motion.article
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -10 }}
-              className="card overflow-hidden group cursor-pointer"
-            >
+            <Link key={post.id} to={`/blog/${post.id}`}>
+              <motion.article
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="card overflow-hidden group cursor-pointer"
+              >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -106,6 +109,7 @@ const BlogSection = () => {
                 </div>
               </div>
             </motion.article>
+            </Link>
           ))}
         </div>
 

@@ -53,6 +53,35 @@
   }
 }
 
+/* Blog Post Prose Styles */
+.prose {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.prose h3 {
+  @apply text-2xl font-outfit font-bold text-navy-900 mt-8 mb-4;
+}
+
+.prose h4 {
+  @apply text-xl font-outfit font-bold text-navy-900 mt-6 mb-3;
+}
+
+.prose p {
+  @apply mb-6 text-lg leading-relaxed;
+}
+
+.prose ul {
+  @apply mb-6 pl-6;
+}
+
+.prose li {
+  @apply mb-2 text-lg leading-relaxed list-disc;
+}
+
+.prose strong {
+  @apply font-semibold text-navy-900;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

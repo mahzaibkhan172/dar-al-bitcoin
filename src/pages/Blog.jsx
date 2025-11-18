@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Search, Clock, User, ArrowRight } from 'lucide-react'
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
 
   const categories = [
     { id: 'all', name: 'Tous les articles' },
@@ -89,9 +91,14 @@ const Blog = () => {
     }
   ]
 
-  const filteredArticles = activeCategory === 'all' 
-    ? articles 
-    : articles.filter(article => article.category === activeCategory)
+  const filteredArticles = articles.filter(article => {
+    const matchesCategory = activeCategory === 'all' || article.category === activeCategory
+    const matchesSearch = searchTerm === '' || 
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.categoryName.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch
+  })
 
   const featuredArticle = articles.find(a => a.featured)
 
@@ -116,6 +123,8 @@ const Blog = () => {
             <div className="relative max-w-2xl mx-auto">
               <input
                 type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Rechercher un article..."
                 className="w-full px-6 py-4 pl-14 rounded-lg bg-navy-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-bitcoin-500"
               />
@@ -150,11 +159,12 @@ const Blog = () => {
       {activeCategory === 'all' && featuredArticle && (
         <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
           <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="card overflow-hidden max-w-5xl mx-auto group cursor-pointer"
-            >
+            <Link to={`/blog/${featuredArticle.id}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="card overflow-hidden max-w-5xl mx-auto group cursor-pointer"
+              >
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-auto overflow-hidden">
                   <img
@@ -192,6 +202,7 @@ const Blog = () => {
                 </div>
               </div>
             </motion.div>
+            </Link>
           </div>
         </section>
       )}
@@ -199,16 +210,35 @@ const Blog = () => {
       {/* Articles Grid */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredArticles.map((article, index) => (
-              <motion.article
-                key={article.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="card overflow-hidden group cursor-pointer"
+          {filteredArticles.length === 0 ? (
+            <div className="text-center py-16">
+              <h3 className="text-2xl font-outfit font-bold text-navy-900 mb-4">
+                Aucun article trouvé
+              </h3>
+              <p className="text-gray-600 mb-8">
+                Essayez de modifier vos critères de recherche ou de sélectionner une autre catégorie.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('')
+                  setActiveCategory('all')
+                }}
+                className="btn-primary"
               >
+                Réinitialiser les filtres
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.map((article, index) => (
+              <Link key={article.id} to={`/blog/${article.id}`}>
+                <motion.article
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="card overflow-hidden group cursor-pointer"
+                >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={article.image}
@@ -242,8 +272,10 @@ const Blog = () => {
                   </div>
                 </div>
               </motion.article>
-            ))}
-          </div>
+              </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>

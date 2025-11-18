@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Formation from './pages/Formation'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Events from './pages/Events'
 import LegalNotice from './pages/LegalNotice'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -19,6 +20,7 @@ function App() {
           <Route path="/qui-sommes-nous" element={<About />} />
           <Route path="/formation" element={<Formation />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/evenements" element={<Events />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
