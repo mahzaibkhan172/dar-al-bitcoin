@@ -150,6 +150,296 @@ const BlogPost = () => {
       author: 'Ahmed K.',
       date: '10 Nov 2024',
       readTime: '6 min'
+    },
+    {
+      id: 4,
+      category: 'security',
+      categoryName: 'Sécurité',
+      categoryColor: 'bg-purple-500',
+      title: 'Guide Complet : Acheter du Bitcoin Sans Riba',
+      excerpt: 'Pas à pas, découvrez comment acquérir du Bitcoin de manière conforme aux principes islamiques...',
+      content: `
+        <p>Acheter du Bitcoin de manière conforme aux principes islamiques nécessite une approche réfléchie. Voici un guide complet pour éviter le Riba.</p>
+        
+        <h3>Méthodes Conformes à la Charia</h3>
+        
+        <h4>1. Achat Direct (Spot)</h4>
+        <p>L'achat immédiat de Bitcoin contre de l'argent est généralement considéré comme halal :</p>
+        <ul>
+          <li>Échange immédiat</li>
+          <li>Pas de crédit ou d'intérêts</li>
+          <li>Possession réelle de l'actif</li>
+        </ul>
+        
+        <h4>2. Plateformes Recommandées</h4>
+        <ul>
+          <li>Kraken (frais transparents)</li>
+          <li>Bitstamp (régulé en Europe)</li>
+          <li>Coinbase Pro (interface simple)</li>
+        </ul>
+        
+        <h3>Méthodes à Éviter</h3>
+        
+        <h4>Trading sur Marge</h4>
+        <p>Le trading avec effet de levier implique :</p>
+        <ul>
+          <li>Emprunt avec intérêts (Riba)</li>
+          <li>Spéculation excessive (Gharar)</li>
+          <li>Risque de perte supérieure à l'investissement</li>
+        </ul>
+        
+        <h4>Contrats à Terme (Futures)</h4>
+        <p>Problématiques car :</p>
+        <ul>
+          <li>Vente de ce qu'on ne possède pas</li>
+          <li>Spéculation pure</li>
+          <li>Pas de livraison réelle</li>
+        </ul>
+        
+        <h3>Guide Pratique d'Achat</h3>
+        
+        <h4>Étape 1 : Choisir une Plateforme</h4>
+        <p>Critères de sélection :</p>
+        <ul>
+          <li>Régulation claire</li>
+          <li>Frais transparents</li>
+          <li>Sécurité éprouvée</li>
+          <li>Pas de services Riba</li>
+        </ul>
+        
+        <h4>Étape 2 : Vérification d'Identité</h4>
+        <p>Processus KYC (Know Your Customer) obligatoire pour la conformité réglementaire.</p>
+        
+        <h4>Étape 3 : Achat et Stockage</h4>
+        <ul>
+          <li>Achat immédiat (ordre au marché)</li>
+          <li>Transfert vers wallet personnel</li>
+          <li>Sauvegarde des clés privées</li>
+        </ul>
+        
+        <h3>Stockage Sécurisé</h3>
+        
+        <h4>Hardware Wallets Recommandés</h4>
+        <ul>
+          <li>Ledger Nano S Plus</li>
+          <li>Trezor Model T</li>
+          <li>BitBox02</li>
+        </ul>
+        
+        <p>Rappel : "Not your keys, not your Bitcoin" - La possession des clés privées est essentielle pour la vraie propriété.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
+      author: 'Youssef M.',
+      date: '8 Nov 2024',
+      readTime: '10 min'
+    },
+    {
+      id: 5,
+      category: 'bitcoin',
+      categoryName: 'Bitcoin & Islam',
+      categoryColor: 'bg-bitcoin-500',
+      title: 'Bitcoin vs l\'Or : Quel Est le Meilleur Selon l\'Islam?',
+      excerpt: 'Comparaison approfondie entre Bitcoin et l\'or du point de vue de la Charia...',
+      content: `
+        <p>La comparaison entre Bitcoin et l'or du point de vue islamique soulève des questions fascinantes sur la nature de la monnaie et de la valeur.</p>
+        
+        <h3>L'Or dans l'Islam</h3>
+        
+        <h4>Statut Traditionnel</h4>
+        <p>L'or occupe une place spéciale dans l'Islam :</p>
+        <ul>
+          <li>Mentionné dans le Coran comme richesse</li>
+          <li>Utilisé pour le calcul de la Zakât</li>
+          <li>Réserve de valeur historique</li>
+          <li>Protection contre l'inflation</li>
+        </ul>
+        
+        <h4>Avantages de l'Or</h4>
+        <ul>
+          <li>Valeur intrinsèque reconnue</li>
+          <li>Stabilité sur le long terme</li>
+          <li>Acceptation universelle</li>
+          <li>Tangibilité physique</li>
+        </ul>
+        
+        <h4>Inconvénients de l'Or</h4>
+        <ul>
+          <li>Difficulté de transport</li>
+          <li>Coûts de stockage</li>
+          <li>Risque de vol</li>
+          <li>Divisibilité limitée</li>
+        </ul>
+        
+        <h3>Bitcoin dans l'Islam</h3>
+        
+        <h4>Statut Contemporain</h4>
+        <p>Bitcoin présente des caractéristiques uniques :</p>
+        <ul>
+          <li>Rareté programmée (21 millions max)</li>
+          <li>Transparence totale</li>
+          <li>Décentralisation</li>
+          <li>Résistance à la censure</li>
+        </ul>
+        
+        <h4>Avantages de Bitcoin</h4>
+        <ul>
+          <li>Portabilité parfaite</li>
+          <li>Divisibilité extrême (8 décimales)</li>
+          <li>Transferts rapides</li>
+          <li>Pas de confiscation possible</li>
+          <li>Offre limitée et prévisible</li>
+        </ul>
+        
+        <h4>Défis de Bitcoin</h4>
+        <ul>
+          <li>Volatilité à court terme</li>
+          <li>Complexité technique</li>
+          <li>Adoption encore limitée</li>
+          <li>Consommation énergétique</li>
+        </ul>
+        
+        <h3>Comparaison Islamique</h3>
+        
+        <h4>Critères de la Charia</h4>
+        <table>
+          <tr><th>Critère</th><th>Or</th><th>Bitcoin</th></tr>
+          <tr><td>Rareté</td><td>✓ Naturelle</td><td>✓ Programmée</td></tr>
+          <tr><td>Durabilité</td><td>✓ Physique</td><td>✓ Numérique</td></tr>
+          <tr><td>Divisibilité</td><td>✓ Limitée</td><td>✓ Parfaite</td></tr>
+          <tr><td>Portabilité</td><td>✗ Difficile</td><td>✓ Parfaite</td></tr>
+          <tr><td>Vérifiabilité</td><td>✓ Tests</td><td>✓ Cryptographie</td></tr>
+        </table>
+        
+        <h3>Conclusion</h3>
+        
+        <h4>Complémentarité</h4>
+        <p>Plutôt que de choisir, une approche équilibrée peut inclure :</p>
+        <ul>
+          <li>Or pour la stabilité à long terme</li>
+          <li>Bitcoin pour l'innovation et la croissance</li>
+          <li>Diversification selon les objectifs</li>
+        </ul>
+        
+        <h4>Perspective Islamique</h4>
+        <p>Les deux actifs peuvent être considérés comme halal s'ils sont :</p>
+        <ul>
+          <li>Achetés sans Riba</li>
+          <li>Détenus comme réserve de valeur</li>
+          <li>Utilisés de manière éthique</li>
+        </ul>
+      `,
+      image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800&q=80',
+      author: 'Mohammed A.',
+      date: '5 Nov 2024',
+      readTime: '8 min'
+    },
+    {
+      id: 6,
+      category: 'finance',
+      categoryName: 'Finance Islamique',
+      categoryColor: 'bg-blue-500',
+      title: 'L\'Inflation: Le Vol Silencieux que l\'Islam Interdit',
+      excerpt: 'Comment l\'inflation systémique constitue une forme de vol et pourquoi Bitcoin offre une alternative...',
+      content: `
+        <p>L'inflation monétaire constitue l'une des formes les plus pernicieuses de vol dans nos sociétés modernes. L'Islam, avec sa vision holistique de la justice économique, nous éclaire sur cette problématique.</p>
+        
+        <h3>Qu'est-ce que l'Inflation?</h3>
+        
+        <h4>Définition Simple</h4>
+        <p>L'inflation est la diminution du pouvoir d'achat de la monnaie au fil du temps. Concrètement :</p>
+        <ul>
+          <li>Ce qui coûtait 100€ en 2000 coûte 150€ aujourd'hui</li>
+          <li>Votre épargne perd de la valeur chaque année</li>
+          <li>Les salaires n'augmentent pas au même rythme</li>
+        </ul>
+        
+        <h4>Les Causes de l'Inflation</h4>
+        <p>L'inflation moderne provient principalement de :</p>
+        <ul>
+          <li>Création monétaire excessive</li>
+          <li>Politique des banques centrales</li>
+          <li>Système de réserves fractionnaires</li>
+          <li>Dette publique croissante</li>
+        </ul>
+        
+        <h3>L'Inflation comme Vol selon l'Islam</h3>
+        
+        <h4>Le Principe de Justice (‘Adl)</h4>
+        <p>L'Islam exige la justice dans tous les échanges. L'inflation viole ce principe car :</p>
+        <ul>
+          <li>Elle transfert la richesse sans consentement</li>
+          <li>Elle pénalise l'épargne et la prudence</li>
+          <li>Elle enrichit les débiteurs au détriment des créanciers</li>
+          <li>Elle crée des inégalités artificielles</li>
+        </ul>
+        
+        <h4>Hadith sur la Monnaie</h4>
+        <p>Le Prophète (paix et bénédictions sur lui) a dit : "Celui qui thesaurise est un pécheur", mais il parlait de la rétention de biens nécessaires, pas de la protection contre l'inflation.</p>
+        
+        <h3>Les Victimes de l'Inflation</h3>
+        
+        <h4>Les Plus Vulnérables</h4>
+        <ul>
+          <li>Retraités avec pensions fixes</li>
+          <li>Salariés à revenus stables</li>
+          <li>Épargnants prudents</li>
+          <li>Pays en développement</li>
+        </ul>
+        
+        <h4>Les Bénéficiaires</h4>
+        <ul>
+          <li>Gouvernements endettés</li>
+          <li>Banques centrales</li>
+          <li>Propriétaires d'actifs réels</li>
+          <li>Emprunteurs à taux fixe</li>
+        </ul>
+        
+        <h3>Bitcoin : Une Solution Islamique</h3>
+        
+        <h4>Monnaie Saine</h4>
+        <p>Bitcoin offre les caractéristiques d'une monnaie saine :</p>
+        <ul>
+          <li>Offre limitée (21 millions maximum)</li>
+          <li>Pas de création arbitraire</li>
+          <li>Transparence totale</li>
+          <li>Décentralisation</li>
+        </ul>
+        
+        <h4>Protection contre l'Inflation</h4>
+        <p>Historiquement, Bitcoin a servi de couverture contre l'inflation :</p>
+        <ul>
+          <li>Croissance de valeur à long terme</li>
+          <li>Adoption croissante</li>
+          <li>Réserve de valeur numérique</li>
+          <li>Indépendance des politiques monétaires</li>
+        </ul>
+        
+        <h3>Perspective Islamique sur Bitcoin</h3>
+        
+        <h4>Conformité aux Principes</h4>
+        <p>Bitcoin respecte les principes islamiques :</p>
+        <ul>
+          <li>Pas de Riba (intérêts)</li>
+          <li>Transparence (pas de Gharar)</li>
+          <li>Justice dans les échanges</li>
+          <li>Protection de la propriété privée</li>
+        </ul>
+        
+        <h4>Action Recommandée</h4>
+        <p>Pour se protéger de l'inflation de manière halal :</p>
+        <ul>
+          <li>Éducation sur Bitcoin</li>
+          <li>Allocation progressive</li>
+          <li>Stockage sécurisé</li>
+          <li>Vision à long terme</li>
+        </ul>
+        
+        <p>En conclusion, l'inflation constitue une forme de vol systémique que l'Islam condamne. Bitcoin offre une alternative éthique pour préserver la richesse et restaurer la justice monétaire.</p>
+      `,
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+      author: 'Fatima L.',
+      date: '2 Nov 2024',
+      readTime: '6 min'
     }
   ]
 

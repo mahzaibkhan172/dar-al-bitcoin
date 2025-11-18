@@ -20,7 +20,6 @@ const Header = () => {
     { name: 'Actualités', path: '/blog' },
     { name: 'Évènement', path: '/evenements' },
     { name: 'Qui sommes nous', path: '/qui-sommes-nous' },
-    { name: 'Actualité', path: '/blog' },
   ]
 
   return (
