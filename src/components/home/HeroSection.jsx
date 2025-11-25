@@ -42,53 +42,25 @@ const HeroSection = () => {
       />
 
       <div className="container-custom px-6 py-32 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl">
           {/* Main Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-outfit font-extrabold text-white mb-6 leading-tight">
-              C'est quoi{' '}
-              <span className="text-gradient">Bitcoin</span> ?
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-outfit font-extrabold text-white mb-8 leading-tight">
+              Bitcoin, la monnaie{' '}
+              <span className="text-gradient">la plus halal</span>
             </h1>
           </motion.div>
-
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed"
-          >
-            Ce n'est pas une mode, ni un outil de spéculation, mais une révolution technologique qui s'attaque à la racine d'un mal profond : le système de la monnaie-dette fondé sur le riba.
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed"
-          >
-            Bitcoin, c'est l'arme pacifique la plus puissante pour sortir du riba systémique, reprendre le contrôle de notre richesse et rebâtir une véritable finance islamique.
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
-          >
-            Dar Al Bitcoin vous aide à comprendre les enjeux, vous former en profondeur et adopter cette révolution monétaire en toute sérénité.
-          </motion.p>
 
           {/* Arabic Quote */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-navy-800/50 backdrop-blur-sm border border-gold-500/30 rounded-2xl p-8 mb-12 max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-navy-800/50 backdrop-blur-sm border border-gold-500/30 rounded-2xl p-8 mb-8 max-w-3xl shadow-2xl"
           >
             <p className="arabic-text text-3xl md:text-4xl mb-4 leading-relaxed">
               يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا
@@ -99,12 +71,22 @@ const HeroSection = () => {
             <p className="text-gold-500 text-sm mt-2">(Sourate Al-Baqara, 2:278)</p>
           </motion.div>
 
+          {/* Hero Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl leading-relaxed"
+          >
+            Comprends le Bitcoin et commence ta hijra financière ! Dar Al Bitcoin vous aide à sortir de la riba en vous formant sur cette révolution monétaire en toute sérénité.
+          </motion.p>
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-6 mb-16"
           >
             <Link to="/formation">
               <motion.button
@@ -132,14 +114,14 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl"
           >
             {trustElements.map((element, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="flex flex-col items-center space-y-2 p-4 bg-navy-800/30 backdrop-blur-sm rounded-xl border border-bitcoin-500/20"
+                className="flex flex-col items-center space-y-2 p-4 bg-navy-800/30 backdrop-blur-sm rounded-xl border border-bitcoin-500/20 shadow-lg"
               >
                 <element.icon className="text-bitcoin-400" size={32} />
                 <p className="text-white text-sm text-center">{element.text}</p>

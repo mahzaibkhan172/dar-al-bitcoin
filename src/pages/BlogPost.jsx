@@ -8,6 +8,104 @@ const BlogPost = () => {
   // Blog posts data (same as in Blog.jsx)
   const articles = [
     {
+      id: 'le-probleme-dont-personne-ne-vous-parle',
+      category: 'finance',
+      categoryName: 'Finance Islamique',
+      categoryColor: 'bg-blue-500',
+      title: 'Le problème dont personne ne vous parle',
+      excerpt: 'Beaucoup veulent croire que le système monétaire actuel peut être corrigé. Mais la réalité finit toujours par s\'imposer : le problème n\'est pas dans les abus du système, mais dans la nature même de la monnaie que nous utilisons...',
+      content: `
+        <p>Beaucoup veulent croire que le système monétaire actuel, aussi imparfait soit-il, peut être corrigé, adapté, "rendu plus éthique".</p>
+        
+        <p>On se dit qu'avec de bonnes intentions, de la rigueur et quelques ajustements, il serait possible de vivre en paix avec une économie fondée sur la dette et l'intérêt.</p>
+        
+        <p>Qu'en évitant les excès, on pourrait rester intègre.</p>
+        
+        <p><strong>Mais la réalité finit toujours par s'imposer : le problème n'est pas dans les abus du système, mais dans la nature même de la monnaie que nous utilisons.</strong></p>
+        
+        <p><strong class="text-bitcoin-500">C'est là que réside le cœur du mal — un mal devenu invisible à force d'être normalisé.</strong></p>
+        
+        <h3>Les symptômes visibles</h3>
+        
+        <p>Le problème structurel se traduit par des conséquences que chacun peut constater au quotidien :</p>
+        
+        <ul>
+          <li><strong>Inflation et perte de pouvoir d'achat</strong> : Les prix grimpent, tandis que l'épargne fond comme neige au soleil.</li>
+          <li><strong>Endettement chronique</strong> : Individus, entreprises et États vivent à crédit pour maintenir un niveau de vie ou financer leurs dépenses.</li>
+          <li><strong>Inégalités croissantes</strong> : La richesse se concentre dans les mains de ceux qui contrôlent la création monétaire et ont accès au crédit.</li>
+          <li><strong>Spéculation et volatilité</strong> : L'économie réelle est subordonnée aux mouvements financiers, souvent détachés de la valeur réelle.</li>
+          <li><strong>Précarité et insécurité économique</strong> : La majorité des citoyens n'ont aucune autonomie face aux cycles de crise.</li>
+          <li><strong>Dépendance à une élite centrale</strong> : Banques centrales et institutions financières dictent les règles, la population y est contrainte et perd toute souveraineté face à la répression financière.</li>
+        </ul>
+        
+        <p class="bg-red-50 border-l-4 border-red-500 p-4 my-6">Ces symptômes sont les signes d'un système malade : l'injustice et la fragilité ne sont pas des accidents, elles sont les conséquences directes de la structure de la monnaie.</p>
+        
+        <h3>Le Riba invisible</h3>
+        
+        <p>La vérité, c'est que le système financier moderne est fondamentalement en contradiction avec nos principes. Le riba (intérêt) n'y apparaît pas comme une erreur isolée, mais comme un pilier central :</p>
+        
+        <ul>
+          <li>la monnaie est créée à partir de la dette, et non d'une valeur réelle,</li>
+          <li>cette dette repose sur un riba systémique,</li>
+          <li>et ce riba exige de nouvelles dettes pour être remboursé, gonflant sans cesse une bulle financière qui est vouée à s'effondrer.</li>
+        </ul>
+        
+        <p>Ce système donne l'illusion de prospérité tout en générant injustice, dépendance et perte de sens.</p>
+        
+        <p><strong>Le problème n'est pas seulement économique : il est profondément spirituel.</strong></p>
+        
+        <p><strong class="text-bitcoin-500">Tant que la monnaie reposera sur l'injustice, aucune réforme, aucun effort individuel, aucune bonne intention ne suffira à rendre le système sain et durable.</strong></p>
+        
+        <div class="bg-navy-900/5 border-l-4 border-gold-500 p-6 my-8">
+          <p class="arabic-text text-2xl mb-4 text-center">يَمْحَقُ اللَّهُ الرِّبَا وَيُرْبِي الصَّدَقَاتِ</p>
+          <p class="text-center italic mb-2">"Allah détruit le riba (intérêts) et fait prospérer les aumônes."</p>
+          <p class="text-center text-gold-500 text-sm mb-4">(Sourate Al-Baqara, 2:276)</p>
+          
+          <div class="border-t border-gold-500/30 pt-4 mt-4">
+            <p class="mb-2"><strong>Hadith :</strong> "Il viendra un temps où il ne restera personne qui ne mange le riba ; et celui qui ne le mange pas en sera atteint par sa poussière."</p>
+            <p class="text-sm text-gray-600">Sunan Ibn Majah n° 2278</p>
+            <p class="arabic-text text-lg mt-3">« لَيَأْتِيَنَّ عَلَى النَّاسِ زَمَانٌ لاَ يَبْقَى مِنْهُمْ أَحَدٌ إِلاَّ أَكَلَ الرِّبَا فَمَنْ لَمْ يَأْكُلْهُ أَصَابَهُ مِنْ غُبَارِهِ »</p>
+          </div>
+        </div>
+        
+        <h3>La confusion Crypto</h3>
+        
+        <p>Depuis quelques années, on entend partout parler de "crypto" ou de "blockchain".</p>
+        
+        <p>Derrière ces mots à la mode se cache une vraie confusion qui cultive la spéculation et détourne de la révolution monétaire.</p>
+        
+        <p><strong>La plupart des projets crypto ne font que reproduire les mêmes mécanismes de spéculation et de dette que le système qu'ils prétendent remplacer :</strong></p>
+        
+        <ul>
+          <li>des promesses de gains rapides et irréalistes,</li>
+          <li>des tokens créés sans création de valeur ou d'effort dépensé,</li>
+          <li>des systèmes centralisés déguisés en "décentralisation",</li>
+          <li>de la Finance Décentralisée qui s'appuie sur l'inflation et le riba.</li>
+        </ul>
+        
+        <p>Pour beaucoup, crypto rime avec argent facile, et non avec justice économique ou liberté monétaire.</p>
+        
+        <p><strong>Cette confusion détourne l'attention du vrai enjeu : la nature de la monnaie et la manière dont elle peut être utilisée pour libérer ou asservir les individus.</strong></p>
+        
+        <div class="bg-bitcoin-50 border-l-4 border-bitcoin-500 p-4 my-6">
+          <p><strong>Bitcoin reste l'exception :</strong> rare, s'appuyant sur un effort dans le monde réel, transparent et résistant à la censure, il réveille l'idée qu'une monnaie peut être autre chose qu'un outil de domination.</p>
+        </div>
+        
+        <h3>Conclusion</h3>
+        
+        <p>Le problème dont personne ne vous parle, c'est que notre système monétaire est fondé sur le Riba. Ce n'est pas un bug, c'est une fonctionnalité.</p>
+        
+        <p>Bitcoin offre une alternative : une monnaie sans Riba, sans autorité centrale, basée sur la rareté et la transparence.</p>
+        
+        <p><strong>Il est temps de comprendre et d'agir.</strong></p>
+      `,
+      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80',
+      author: 'Dar Al Bitcoin',
+      date: '15 Nov 2024',
+      readTime: '12 min',
+      featured: false
+    },
+    {
       id: 1,
       category: 'finance',
       categoryName: 'Finance Islamique',
@@ -443,7 +541,7 @@ const BlogPost = () => {
     }
   ]
 
-  const article = articles.find(a => a.id === parseInt(id))
+  const article = articles.find(a => a.id === id || a.id === parseInt(id))
 
   if (!article) {
     return (

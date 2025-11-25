@@ -17,6 +17,19 @@ const Blog = () => {
 
   const articles = [
     {
+      id: 'le-probleme-dont-personne-ne-vous-parle',
+      category: 'finance',
+      categoryName: 'Finance Islamique',
+      categoryColor: 'bg-blue-500',
+      title: 'Le problème dont personne ne vous parle',
+      excerpt: 'Beaucoup veulent croire que le système monétaire actuel peut être corrigé. Mais la réalité finit toujours par s\'imposer : le problème n\'est pas dans les abus du système, mais dans la nature même de la monnaie que nous utilisons...',
+      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80',
+      author: 'Dar Al Bitcoin',
+      date: '15 Nov 2024',
+      readTime: '12 min',
+      featured: true
+    },
+    {
       id: 1,
       category: 'finance',
       categoryName: 'Finance Islamique',
@@ -27,7 +40,7 @@ const Blog = () => {
       author: 'Mohammed A.',
       date: '15 Nov 2024',
       readTime: '5 min',
-      featured: true
+      featured: false
     },
     {
       id: 2,

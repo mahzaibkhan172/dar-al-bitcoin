@@ -22,7 +22,7 @@ const Events = () => {
 
   const events = [
     {
-      date: { day: '15', month: 'DÉC' },
+      date: { day: '11', month: 'DÉC' },
       title: 'Webinaire : Bitcoin, est-ce vraiment Halal?',
       type: 'Webinaire',
       description: 'Débat avec des savants et experts en finance islamique',

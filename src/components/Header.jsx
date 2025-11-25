@@ -16,10 +16,9 @@ const Header = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Formation', path: '/formation' },
+    { name: 'Qui sommes nous', path: '/qui-sommes-nous' },
     { name: 'Actualités', path: '/blog' },
     { name: 'Évènement', path: '/evenements' },
-    { name: 'Qui sommes nous', path: '/qui-sommes-nous' },
   ]
 
   return (

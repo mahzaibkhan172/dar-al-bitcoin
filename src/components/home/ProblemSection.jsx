@@ -92,15 +92,24 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-12"
+          className="flex flex-col sm:flex-row gap-6 justify-center mt-12"
         >
           <Link to="/formation">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary text-lg"
+              className="btn-primary text-lg px-8 py-4"
             >
-              Comprendre pourquoi Bitcoin est différent
+              Découvrir la Formation
+            </motion.button>
+          </Link>
+          <Link to="/blog/le-probleme-dont-personne-ne-vous-parle">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-secondary text-lg px-8 py-4"
+            >
+              Lire l'article complet
             </motion.button>
           </Link>
         </motion.div>

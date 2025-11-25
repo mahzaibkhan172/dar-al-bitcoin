@@ -383,6 +383,79 @@ const About = () => {
         </div>
       </section>
 
+      {/* Social Media Section */}
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+              Suivez-nous
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Rejoignez notre communauté sur les réseaux sociaux pour rester informé et échanger avec d'autres musulmans intéressés par Bitcoin
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: 'Telegram',
+                icon: MessageCircle,
+                url: 'https://t.me/daralbitcoin',
+                color: 'from-blue-500 to-blue-600',
+                description: 'Rejoignez notre communauté'
+              },
+              {
+                name: 'Instagram',
+                icon: Instagram,
+                url: 'https://instagram.com/dar.al.bitcoin',
+                color: 'from-pink-500 to-purple-600',
+                description: 'Suivez nos actualités'
+              },
+              {
+                name: 'Twitter',
+                icon: Twitter,
+                url: 'https://twitter.com/Amgad_Khafagy',
+                color: 'from-blue-400 to-blue-500',
+                description: 'Suivez @Amgad_Khafagy'
+              },
+              {
+                name: 'YouTube',
+                icon: Youtube,
+                url: 'https://youtube.com/@daralbitcoin',
+                color: 'from-red-500 to-red-600',
+                description: 'Vidéos éducatives'
+              }
+            ].map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.05 }}
+                className="card p-8 text-center group cursor-pointer"
+              >
+                <div className={`w-20 h-20 bg-gradient-to-br ${social.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <social.icon className="text-white" size={40} />
+                </div>
+                <h3 className="text-2xl font-outfit font-bold text-navy-900 mb-2 group-hover:text-bitcoin-500 transition-colors">
+                  {social.name}
+                </h3>
+                <p className="text-gray-600">
+                  {social.description}
+                </p>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding bg-white">
         <div className="container-custom text-center">
@@ -396,7 +469,7 @@ const About = () => {
                   Commencer la formation
                 </motion.button>
               </Link>
-              <a href="mailto:contact@daralbitcoin.com">
+              <a href="mailto:daralbitcoin.pro@gmail.com">
                 <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
                   Nous contacter
                 </motion.button>
