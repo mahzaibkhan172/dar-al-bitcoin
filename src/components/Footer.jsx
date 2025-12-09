@@ -31,9 +31,11 @@ const Footer = () => {
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-bitcoin-500 to-bitcoin-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">₿</span>
-              </div>
+              <img 
+                src="/logo.webp" 
+                alt="Dar Al Bitcoin Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h3 className="font-outfit font-bold text-xl">Dar Al Bitcoin</h3>
               </div>

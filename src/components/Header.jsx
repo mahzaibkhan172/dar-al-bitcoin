@@ -33,9 +33,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-bitcoin-500 to-bitcoin-600 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">₿</span>
-            </div>
+            <img 
+              src="/logo.webp" 
+              alt="Dar Al Bitcoin Logo" 
+              className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform duration-300"
+            />
             <div>
               <h1 className="text-white font-outfit font-bold text-xl">Dar Al Bitcoin</h1>
               <p className="text-bitcoin-400 text-xs">Libérez-vous du Riba</p>

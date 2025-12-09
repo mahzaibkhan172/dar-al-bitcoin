@@ -3,6 +3,9 @@ import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Clock, Users, Award, Lock, BookOpen, Shield, Zap, ChevronDown, ChevronUp, AlertCircle } from 'lucide-react'
+import LearningExamplesSection from '../components/home/LearningExamplesSection'
+import FormationSection from '../components/home/FormationSection'
+import ComparisonSection from '../components/home/ComparisonSection'
 
 const Formation = () => {
   const ref = useRef(null)
@@ -199,6 +202,108 @@ const Formation = () => {
           </div>
         </div>
       </section>
+
+      {/* Moved Sections from Homepage - Now with Better Layout */}
+      
+      {/* Section 1: Tu as le droit de comprendre - Image Left, Content Right */}
+      <section className="section-padding bg-white overflow-hidden">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80" 
+                alt="Formation Bitcoin" 
+                className="rounded-2xl shadow-2xl"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+                Tu as le droit de comprendre
+              </h2>
+              <div className="space-y-4 text-lg text-gray-700">
+                <p>
+                  Chez Dar Al Bitcoin, nous croyons que chaque personne a le droit — et même le devoir — de comprendre comment fonctionne l'argent, le système monétaire actuel et les alternatives éthiques qui s'offrent à elle.
+                </p>
+                <p>
+                  Personne ne devrait dépendre d'experts, de banques ou d'institutions pour prendre des décisions essentielles concernant sa propre richesse.
+                </p>
+                <p className="text-xl font-semibold text-bitcoin-500">
+                  Nos formations ont un objectif simple : t'aider à comprendre Bitcoin en profondeur, avec clarté, rigueur et pédagogie.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Fiat vs Bitcoin - Content Left, Image Right */}
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+                FIAT vs Bitcoin : Une Question de Principes
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                  <h3 className="font-bold text-navy-900 mb-3 flex items-center">
+                    <span className="text-2xl mr-2">💸</span> Système FIAT
+                  </h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>✗ Création par la Dette (Riba)</li>
+                    <li>✗ Inflation Permanente</li>
+                    <li>✗ Contrôle Centralisé</li>
+                    <li>✗ Surveillance Totale</li>
+                  </ul>
+                </div>
+                <div className="bg-bitcoin-50 border-l-4 border-bitcoin-500 p-6 rounded-lg">
+                  <h3 className="font-bold text-navy-900 mb-3 flex items-center">
+                    <span className="text-2xl mr-2">₿</span> Bitcoin
+                  </h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>✓ Création Transparente (Sans Riba)</li>
+                    <li>✓ Réserve de Valeur (21M max)</li>
+                    <li>✓ Décentralisation Totale</li>
+                    <li>✓ Souveraineté Financière</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&q=80" 
+                alt="Bitcoin vs FIAT" 
+                className="rounded-2xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Learning Examples - Full Width with Cards */}
+      <LearningExamplesSection />
 
       {/* Training Overview Section */}
       <section className="section-padding bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">

@@ -42,91 +42,92 @@ const HeroSection = () => {
       />
 
       <div className="container-custom px-6 py-32 relative z-10">
-        <div className="max-w-6xl">
-          {/* Main Heading */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-outfit font-extrabold text-white mb-8 leading-tight">
+            {/* Main Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-outfit font-extrabold text-white mb-8 leading-tight">
               Bitcoin, la monnaie{' '}
               <span className="text-gradient">la plus halal</span>
             </h1>
-          </motion.div>
 
-          {/* Arabic Quote */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-navy-800/50 backdrop-blur-sm border border-gold-500/30 rounded-2xl p-8 mb-8 max-w-3xl shadow-2xl"
-          >
-            <p className="arabic-text text-3xl md:text-4xl mb-4 leading-relaxed">
-              يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا
+            {/* Arabic Quote */}
+            <div className="bg-navy-800/50 backdrop-blur-sm border border-gold-500/30 rounded-2xl p-6 mb-6 shadow-2xl">
+              <p className="arabic-text text-2xl md:text-3xl mb-3 leading-relaxed">
+                يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا
+              </p>
+              <p className="text-gray-300 text-base italic">
+                "Ô croyants, craignez Allah et renoncez au reste de l'usure"
+              </p>
+              <p className="text-gold-500 text-sm mt-2">(Sourate Al-Baqara, 2:278)</p>
+            </div>
+
+            {/* Hero Description */}
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+              Comprends le Bitcoin et commence ta hijra financière ! Dar Al Bitcoin vous aide à sortir de la riba en vous formant sur cette révolution monétaire en toute sérénité.
             </p>
-            <p className="text-gray-300 text-lg italic">
-              "Ô croyants, craignez Allah et renoncez au reste de l'usure"
-            </p>
-            <p className="text-gold-500 text-sm mt-2">(Sourate Al-Baqara, 2:278)</p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Link to="/formation">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-primary text-lg px-8 py-4 flex items-center space-x-2"
+                >
+                  <BookOpen size={24} />
+                  <span>Découvrir notre formation</span>
+                </motion.button>
+              </Link>
+              <a href="#problem">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-secondary text-lg px-8 py-4 flex items-center space-x-2"
+                >
+                  <Play size={24} />
+                  <span>Comprendre le problème</span>
+                </motion.button>
+              </a>
+            </div>
+
+            {/* Trust Elements */}
+            <div className="grid grid-cols-2 gap-4">
+              {trustElements.map((element, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                  className="flex flex-col items-center space-y-2 p-4 bg-navy-800/30 backdrop-blur-sm rounded-xl border border-bitcoin-500/20 shadow-lg"
+                >
+                  <element.icon className="text-bitcoin-400" size={28} />
+                  <p className="text-white text-xs text-center">{element.text}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Hero Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl leading-relaxed"
-          >
-            Comprends le Bitcoin et commence ta hijra financière ! Dar Al Bitcoin vous aide à sortir de la riba en vous formant sur cette révolution monétaire en toute sérénité.
-          </motion.p>
-
-          {/* CTA Buttons */}
+          {/* Right Side - Image */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 mb-16"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="hidden lg:block"
           >
-            <Link to="/formation">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary text-lg px-10 py-5 flex items-center space-x-2"
-              >
-                <BookOpen size={24} />
-                <span>Découvrir notre formation</span>
-              </motion.button>
-            </Link>
-            <a href="#problem">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary text-lg px-10 py-5 flex items-center space-x-2"
-              >
-                <Play size={24} />
-                <span>Comprendre le problème</span>
-              </motion.button>
-            </a>
-          </motion.div>
-
-          {/* Trust Elements */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl"
-          >
-            {trustElements.map((element, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="flex flex-col items-center space-y-2 p-4 bg-navy-800/30 backdrop-blur-sm rounded-xl border border-bitcoin-500/20 shadow-lg"
-              >
-                <element.icon className="text-bitcoin-400" size={32} />
-                <p className="text-white text-sm text-center">{element.text}</p>
-              </motion.div>
-            ))}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&q=80" 
+                alt="Bitcoin Islamic Finance" 
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent rounded-2xl"></div>
+            </div>
           </motion.div>
         </div>
       </div>
