@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { CheckCircle, Lock, Globe, Users, Play, BookOpen } from 'lucide-react'
+import { CheckCircle, Lock, Globe, Users, Play, BookOpen, ChevronDown } from 'lucide-react'
 
 const HeroSection = () => {
   const trustElements = [
@@ -133,19 +133,35 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-bitcoin-400 rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-bitcoin-400 rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
+      <a href="#problem" className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer group">
+        <motion.div
+          className="flex flex-col items-center space-y-1"
+        >
+          <span className="text-bitcoin-400 text-xs font-semibold tracking-widest uppercase mb-2 group-hover:text-bitcoin-300 transition-colors">Découvrir</span>
+          <div className="relative flex flex-col items-center">
+            <motion.div
+              animate={{ y: [0, 8, 0], opacity: [0.3, 1, 0.3] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0 }}
+            >
+              <ChevronDown className="text-bitcoin-400 group-hover:text-bitcoin-300 transition-colors" size={28} strokeWidth={2.5} />
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, 8, 0], opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+              className="-mt-4"
+            >
+              <ChevronDown className="text-bitcoin-400 group-hover:text-bitcoin-300 transition-colors" size={28} strokeWidth={2.5} />
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, 8, 0], opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+              className="-mt-4"
+            >
+              <ChevronDown className="text-bitcoin-400 group-hover:text-bitcoin-300 transition-colors" size={28} strokeWidth={2.5} />
+            </motion.div>
+          </div>
+        </motion.div>
+      </a>
     </section>
   )
 }

@@ -31,7 +31,7 @@
   }
   
   .btn-secondary {
-    @apply border-2 border-white text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-white hover:text-navy-900 transition-all duration-300 text-sm md:text-base;
+    @apply border-2 border-navy-900 text-navy-900 font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-navy-900 hover:text-white transition-all duration-300 text-sm md:text-base;
   }
   
   .card {

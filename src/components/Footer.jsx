@@ -27,19 +27,19 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Column 1: Brand */}
-          <div>
-            <div className="flex items-center space-x-3 mb-4">
+          <div className="md:col-span-1">
+            <Link to="/" className="flex items-center space-x-3 mb-4 group cursor-pointer">
               <img 
                 src="/logo.webp" 
                 alt="Dar Al Bitcoin Logo" 
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
               />
               <div>
-                <h3 className="font-outfit font-bold text-xl">Dar Al Bitcoin</h3>
+                <h3 className="font-outfit font-bold text-xl group-hover:text-bitcoin-400 transition-colors">Dar Al Bitcoin</h3>
               </div>
-            </div>
+            </Link>
             <p className="text-bitcoin-400 font-semibold mb-3">Libérez-vous du Riba, Adoptez Bitcoin</p>
             <p className="text-gray-400 text-sm mb-6">
               Éduquer la communauté musulmane sur Bitcoin comme solution au Riba systémique.
@@ -60,8 +60,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Contact */}
-          <div>
+          {/* Column 2: Empty - Hidden on mobile */}
+          <div className="hidden md:block"></div>
+
+          {/* Column 3: Empty - Hidden on mobile */}
+          <div className="hidden md:block"></div>
+
+          {/* Column 4: Contact */}
+          <div className="md:col-span-1">
             <h4 className="font-outfit font-bold text-lg mb-6">Contact</h4>
             <div className="space-y-4">
               <a

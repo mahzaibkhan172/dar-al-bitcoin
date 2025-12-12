@@ -51,33 +51,51 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
-      <section ref={ref} className="section-padding bg-white">
+      {/* Story - Image Left, Text Right */}
+      <section ref={ref} className="section-padding bg-white overflow-hidden">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-8">
-              Pourquoi Dar Al Bitcoin Existe
-            </h2>
-            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-              <p>
-                Nous avons observé un problème majeur dans la communauté musulmane : la confusion entre Bitcoin et "la crypto". 
-                Cette confusion est dangereuse car elle empêche de voir la vraie valeur de Bitcoin comme solution au Riba systémique.
-              </p>
-              <p>
-                Le système monétaire FIAT (euro, dollar) est basé sur la création monétaire par la dette. 
-                Chaque unité monétaire en circulation contient du Riba à sa création même. 
-                C'est un système usuraire par design, mais personne ne vous le dit.
-              </p>
-              <p className="text-xl font-semibold text-navy-900">
-                Notre mission est de corriger cette vision et de montrer que Bitcoin n'est pas un gadget technologique, 
-                mais une réponse islamique à un problème réel.
-              </p>
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left Side - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80" 
+                alt="Bitcoin et Finance Islamique" 
+                className="rounded-xl md:rounded-2xl shadow-2xl w-full"
+              />
+            </motion.div>
+
+            {/* Right Side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-navy-900 mb-6">
+                Pourquoi Dar Al Bitcoin Existe
+              </h2>
+              <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+                <p>
+                  Nous avons observé un problème majeur dans la communauté musulmane : la confusion entre Bitcoin et "la crypto". 
+                  Cette confusion est dangereuse car elle empêche de voir la vraie valeur de Bitcoin comme solution au Riba systémique.
+                </p>
+                <p>
+                  Le système monétaire FIAT (euro, dollar) est basé sur la création monétaire par la dette. 
+                  Chaque unité monétaire en circulation contient du Riba à sa création même. 
+                  C'est un système usuraire par design, mais personne ne vous le dit.
+                </p>
+                <p className="text-lg md:text-xl font-semibold text-navy-900">
+                  Notre mission est de corriger cette vision et de montrer que Bitcoin n'est pas un gadget technologique, 
+                  mais une réponse islamique à un problème réel.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -463,14 +481,14 @@ const About = () => {
             <h2 className="text-4xl font-outfit font-bold text-navy-900 mb-8">
               Rejoignez notre mission
             </h2>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/formation">
-                <motion.button whileHover={{ scale: 1.05 }} className="btn-primary">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+              <Link to="/formation" className="w-full sm:w-auto">
+                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="btn-primary w-full sm:w-auto">
                   Commencer la formation
                 </motion.button>
               </Link>
-              <a href="mailto:daralbitcoin.pro@gmail.com">
-                <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
+              <a href="mailto:daralbitcoin.pro@gmail.com" className="w-full sm:w-auto">
+                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="btn-secondary w-full sm:w-auto">
                   Nous contacter
                 </motion.button>
               </a>

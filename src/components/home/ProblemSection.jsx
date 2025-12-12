@@ -92,22 +92,22 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center mt-12"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mt-12"
         >
-          <Link to="/formation">
+          <Link to="/formation" className="w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary text-lg px-8 py-4"
+              className="btn-primary w-full sm:w-auto"
             >
               Découvrir la Formation
             </motion.button>
           </Link>
-          <Link to="/blog/le-probleme-dont-personne-ne-vous-parle">
+          <Link to="/blog/le-probleme-dont-personne-ne-vous-parle" className="w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-secondary text-lg px-8 py-4"
+              className="btn-secondary w-full sm:w-auto"
             >
               Lire l'article complet
             </motion.button>
