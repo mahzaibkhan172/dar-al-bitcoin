@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Users, Shield, Heart, Target, MapPin, Clock, Award } from 'lucide-react'
+import { BookOpen, Users, Shield, Heart, Target, MapPin, Clock, Award, MessageCircle, Instagram, Twitter, Youtube } from 'lucide-react'
 import EventRegistrationModal from '../components/EventRegistrationModal'
 
 const About = () => {

@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
@@ -60,22 +60,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Empty (was Navigation) */}
-          <div></div>
-
-          {/* Column 3: Empty (was Ressources) */}
-          <div></div>
-
-          {/* Column 4: Contact */}
+          {/* Column 2: Contact */}
           <div>
             <h4 className="font-outfit font-bold text-lg mb-6">Contact</h4>
             <div className="space-y-4">
               <a
                 href="mailto:daralbitcoin.pro@gmail.com"
-                className="flex items-center space-x-3 text-gray-400 hover:text-bitcoin-400 transition-colors"
+                className="flex items-center space-x-3 text-gray-400 hover:text-bitcoin-400 transition-colors break-all"
               >
-                <Mail size={20} />
-                <span>daralbitcoin.pro@gmail.com</span>
+                <Mail size={20} className="flex-shrink-0" />
+                <span className="text-sm">daralbitcoin.pro@gmail.com</span>
               </a>
               <a
                 href="https://t.me/daralbitcoin"
@@ -83,11 +77,10 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-400 hover:text-bitcoin-400 transition-colors"
               >
-                <MessageCircle size={20} />
+                <MessageCircle size={20} className="flex-shrink-0" />
                 <span>Communauté Telegram</span>
               </a>
             </div>
-
           </div>
         </div>
 

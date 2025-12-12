@@ -118,15 +118,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="hidden lg:block"
+            className="mt-8 lg:mt-0"
           >
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&q=80" 
                 alt="Bitcoin Islamic Finance" 
-                className="rounded-2xl shadow-2xl"
+                className="rounded-xl md:rounded-2xl shadow-2xl w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent rounded-xl md:rounded-2xl"></div>
             </div>
           </motion.div>
         </div>
