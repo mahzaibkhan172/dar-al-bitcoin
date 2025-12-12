@@ -6,7 +6,6 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isBlogDropdownOpen, setIsBlogDropdownOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -29,18 +28,18 @@ const Header = () => {
         isScrolled ? 'bg-navy-900 shadow-lg' : 'bg-navy-900/80 backdrop-blur-sm'
       }`}
     >
-      <nav className="container-custom px-6 py-4">
+      <nav className="container-custom px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
             <img 
               src="/logo.webp" 
               alt="Dar Al Bitcoin Logo" 
-              className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform duration-300"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain transform group-hover:scale-110 transition-transform duration-300"
             />
             <div>
-              <h1 className="text-white font-outfit font-bold text-xl">Dar Al Bitcoin</h1>
-              <p className="text-bitcoin-400 text-xs">Libérez-vous du Riba</p>
+              <h1 className="text-white font-outfit font-bold text-base sm:text-xl">Dar Al Bitcoin</h1>
+              <p className="text-bitcoin-400 text-xs hidden sm:block">Libérez-vous du Riba</p>
             </div>
           </Link>
 
