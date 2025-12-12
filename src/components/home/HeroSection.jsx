@@ -87,7 +87,7 @@ const HeroSection = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-secondary w-full sm:w-auto flex items-center justify-center space-x-2"
+                  className="border-2 border-white text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-white hover:text-navy-900 transition-all duration-300 text-sm md:text-base w-full sm:w-auto flex items-center justify-center space-x-2"
                 >
                   <Play size={20} className="flex-shrink-0" />
                   <span className="truncate">Comprendre le problème</span>
