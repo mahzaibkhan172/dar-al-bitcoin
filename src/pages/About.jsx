@@ -137,8 +137,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Events Section */}
-      <section className="section-padding bg-white">
+      {/* Events Section - HIDDEN */}
+      {/* <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -238,7 +238,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Us Section */}
       <section className="section-padding bg-white">
@@ -335,8 +335,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Past Events */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+      {/* Past Events - HIDDEN */}
+      {/* <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -370,7 +370,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Host Event CTA */}
       <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-800">
