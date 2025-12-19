@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-outfit font-bold text-navy-900 mb-6">
-            Ils Ont Rejoint le Mouvement
+            Ils en parlent mieux que nous
           </h2>
         </motion.div>
 
