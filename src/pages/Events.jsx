@@ -187,7 +187,7 @@ const Events = () => {
               </ul>
             </div>
             <a href="mailto:contact@daralbitcoin.com">
-              <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
+              <motion.button whileHover={{ scale: 1.05 }} className="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-navy-900 transition-all duration-300">
                 Proposer un événement
               </motion.button>
             </a>

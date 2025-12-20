@@ -106,10 +106,10 @@ const Formation = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-outfit font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-outfit font-bold text-white mb-6">
               Formation Bitcoin & Islam
             </h1>
-            <p className="text-2xl text-gray-300">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300">
               De la confusion à la clarté : Maîtrisez Bitcoin avec une perspective islamique
             </p>
           </motion.div>
@@ -117,23 +117,25 @@ const Formation = () => {
       </section>
 
       {/* Why This Training */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-outfit font-bold text-navy-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-navy-900 mb-4 md:mb-6">
               Vous Avez un Problème (Et Vous Ne le Savez Peut-Être Pas)
             </h2>
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
-              <p>
+            <div className="prose prose-base sm:prose-lg max-w-none text-gray-700 space-y-3 md:space-y-4">
+              <p className="text-base sm:text-lg">
                 Vous utilisez l'euro ou le dollar chaque jour. Vous payez vos factures, vous épargnez, vous investissez.
               </p>
-              <p className="text-xl font-semibold text-navy-900">
+              <p className="text-lg sm:text-xl font-semibold text-navy-900">
                 Mais saviez-vous que chaque euro dans votre poche contient du Riba à sa création même?
               </p>
-              <p>
+              <p className="text-base sm:text-lg">
                 Le système monétaire moderne est basé sur la création par la dette = un système usuraire par design.
               </p>
             </div>
@@ -141,8 +143,8 @@ const Formation = () => {
         </div>
       </section>
 
-      {/* Modules */}
-      <section ref={ref} className="section-padding bg-gradient-to-b from-gray-50 to-white">
+      {/* Modules - HIDDEN */}
+      {/* <section ref={ref} className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -201,13 +203,14 @@ const Formation = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Moved Sections from Homepage - Now with Better Layout */}
       
       {/* Section 1: Tu as le droit de comprendre - Image Left, Content Right */}
-      <section className="section-padding bg-white overflow-hidden">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+        <div className="absolute inset-0 islamic-pattern opacity-5"></div>
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -227,17 +230,17 @@ const Formation = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-white mb-4 md:mb-6">
                 Tu as le droit de comprendre
               </h2>
-              <div className="space-y-4 text-lg text-gray-700">
+              <div className="space-y-3 md:space-y-4 text-base sm:text-lg text-gray-300">
                 <p>
                   Chez Dar Al Bitcoin, nous croyons que chaque personne a le droit — et même le devoir — de comprendre comment fonctionne l'argent, le système monétaire actuel et les alternatives éthiques qui s'offrent à elle.
                 </p>
                 <p>
                   Personne ne devrait dépendre d'experts, de banques ou d'institutions pour prendre des décisions essentielles concernant sa propre richesse.
                 </p>
-                <p className="text-xl font-semibold text-bitcoin-500">
+                <p className="text-lg sm:text-xl font-semibold text-bitcoin-400">
                   Nos formations ont un objectif simple : t'aider à comprendre Bitcoin en profondeur, avec clarté, rigueur et pédagogie.
                 </p>
               </div>
@@ -247,7 +250,7 @@ const Formation = () => {
       </section>
 
       {/* Section 2: Fiat vs Bitcoin - Content Left, Image Right */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="section-padding bg-white overflow-hidden">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -257,26 +260,26 @@ const Formation = () => {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-navy-900 mb-4 md:mb-6">
                 FIAT vs Bitcoin : Une Question de Principes
               </h2>
-              <div className="space-y-6">
-                <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
-                  <h3 className="font-bold text-navy-900 mb-3 flex items-center">
+              <div className="space-y-4 md:space-y-6">
+                <div className="bg-red-50 border-l-4 border-red-500 p-4 sm:p-6 rounded-lg">
+                  <h3 className="font-bold text-navy-900 mb-2 md:mb-3 flex items-center text-lg sm:text-xl">
                     <span className="text-2xl mr-2">💸</span> Système FIAT
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
                     <li>✗ Création par la Dette (Riba)</li>
                     <li>✗ Inflation Permanente</li>
                     <li>✗ Contrôle Centralisé</li>
                     <li>✗ Surveillance Totale</li>
                   </ul>
                 </div>
-                <div className="bg-bitcoin-50 border-l-4 border-bitcoin-500 p-6 rounded-lg">
-                  <h3 className="font-bold text-navy-900 mb-3 flex items-center">
+                <div className="bg-bitcoin-50 border-l-4 border-bitcoin-500 p-4 sm:p-6 rounded-lg">
+                  <h3 className="font-bold text-navy-900 mb-2 md:mb-3 flex items-center text-lg sm:text-xl">
                     <span className="text-2xl mr-2">₿</span> Bitcoin
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
                     <li>✓ Création Transparente (Sans Riba)</li>
                     <li>✓ Réserve de Valeur (21M max)</li>
                     <li>✓ Décentralisation Totale</li>
@@ -306,7 +309,7 @@ const Formation = () => {
       <LearningExamplesSection />
 
       {/* Training Overview Section */}
-      <section className="section-padding bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+      <section ref={ref} className="section-padding bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 islamic-pattern opacity-5"></div>
         <motion.div
@@ -322,36 +325,52 @@ const Formation = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-outfit font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-white mb-4 md:mb-6">
               Notre Formation : De la Confusion à la Clarté
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl max-w-3xl mx-auto text-gray-300">
               Un parcours complet pour passer de spectateur à acteur de votre souveraineté financière islamique
             </p>
           </motion.div>
 
           {/* Modules Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 md:mb-12">
             {[
               {
                 icon: AlertCircle,
-                title: 'Le Problème FIAT',
+                number: '01',
+                title: 'Introduction et mise en perspective',
                 points: ['Comprendre le Riba systémique', 'Histoire de la monnaie et de la dette', 'Pourquoi l\'euro/dollar ne sont pas neutres']
               },
               {
                 icon: Zap,
-                title: 'Bitcoin 101',
+                number: '02',
+                title: 'Le problème monétaire et la naissance du Bitcoin',
                 points: ['Qu\'est-ce que Bitcoin vraiment?', 'Différence entre Bitcoin et "crypto"', 'Pourquoi 21 millions est crucial']
               },
               {
                 icon: BookOpen,
-                title: 'Bitcoin & Islam',
+                number: '03',
+                title: 'L\'ingéniosité de la solution proposée par Bitcoin',
                 points: ['Les avis des savants sur Bitcoin', 'Bitcoin est-il halal?', 'Réfuter les objections communes']
               },
               {
                 icon: Shield,
-                title: 'Pratique & Sécurité',
+                number: '04',
+                title: 'L\'analyse du prix et ce qu\'il révèle',
                 points: ['Comment acheter du Bitcoin', 'Sécuriser vos Bitcoin (self-custody)', 'Utiliser Bitcoin au quotidien']
+              },
+              {
+                icon: BookOpen,
+                number: '05',
+                title: 'Conformité du Bitcoin à la Shariah',
+                points: ['Comprendre l\'alignement de Bitcoin à l\'éthique islamique', 'Ce qu\'est une monnaie saine en Islam', 'L\'histoire de la monnaie dans la civilisation musulmane', 'La divergence des avis contemporains']
+              },
+              {
+                icon: Lock,
+                number: '06',
+                title: 'Maîtriser le stockage, l\'achat et l\'utilisation de Bitcoin',
+                points: ['Comprendre les différents types de portefeuille', 'Les clés privées et publiques', 'L\'interaction avec le réseau Bitcoin et les meilleurs outils', 'L\'utilisation du réseau Lightning']
               }
             ].map((module, index) => (
               <motion.div
@@ -360,13 +379,13 @@ const Formation = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.05 }}
-                className="bg-navy-800/50 backdrop-blur-sm border border-bitcoin-500/30 rounded-xl p-6 hover:border-bitcoin-500 transition-all duration-300"
+                className="bg-navy-800/50 backdrop-blur-sm border border-bitcoin-500/30 rounded-xl p-4 sm:p-6 hover:border-bitcoin-500 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-bitcoin-500 to-bitcoin-600 rounded-xl flex items-center justify-center mb-4">
                   <module.icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-outfit font-bold text-white mb-4">
-                  Module {index + 1}: {module.title}
+                <h3 className="text-lg sm:text-xl font-outfit font-bold text-white mb-3 md:mb-4">
+                  Module {module.number}: {module.title}
                 </h3>
                 <ul className="space-y-2">
                   {module.points.map((point, i) => (
@@ -385,9 +404,9 @@ const Formation = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-navy-800/30 backdrop-blur-sm border border-bitcoin-500/20 rounded-2xl p-8 mb-12"
+            className="bg-navy-800/30 backdrop-blur-sm border border-bitcoin-500/20 rounded-2xl p-6 sm:p-8 mb-8 md:mb-12"
           >
-            <h3 className="text-2xl font-outfit font-bold text-white text-center mb-8">
+            <h3 className="text-xl sm:text-2xl font-outfit font-bold text-white text-center mb-6 md:mb-8">
               Ce Qui Est Inclus
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -416,13 +435,13 @@ const Formation = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
           >
             <a href="#contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary text-lg"
+                className="btn-primary text-base sm:text-lg w-full sm:w-auto"
               >
                 Rejoindre la prochaine session
               </motion.button>
@@ -431,7 +450,7 @@ const Formation = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-secondary text-lg"
+                className="border-2 border-white text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-navy-900 transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
               >
                 Voir le programme complet
               </motion.button>
@@ -440,29 +459,7 @@ const Formation = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-4xl font-outfit font-bold text-navy-900 text-center mb-12">
-            Ce Qui Est Inclus
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className="card p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-bitcoin-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="text-bitcoin-500" size={32} />
-                </div>
-                <h3 className="font-bold text-navy-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Pricing */}
       <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-800">
@@ -473,12 +470,12 @@ const Formation = () => {
             className="max-w-2xl mx-auto"
           >
             <div className="bg-navy-800/50 backdrop-blur-sm border-2 border-bitcoin-500 rounded-3xl p-12 text-center">
-              <h2 className="text-3xl font-outfit font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-outfit font-bold text-white mb-4">
                 Formation Complète Bitcoin & Islam
               </h2>
               <div className="mb-8">
                 <span className="text-gray-400 line-through text-2xl">299€</span>
-                <span className="text-6xl font-bold text-bitcoin-400 ml-4">199€</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-bitcoin-400 ml-4">500€</span>
                 <p className="text-gray-300 mt-2">Offre de lancement</p>
               </div>
               <ul className="text-left space-y-3 mb-8">
@@ -516,17 +513,32 @@ const Formation = () => {
       </section>
 
       {/* FAQ */}
-      <section id="contact" className="section-padding bg-white">
+      <section id="contact" className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-4xl font-outfit font-bold text-navy-900 text-center mb-12">
-            Questions Fréquentes
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-outfit font-bold text-navy-900 mb-6">
+              Questions Fréquentes
+            </h2>
+          </motion.div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="card p-6">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="card p-6"
+              >
                 <h3 className="font-bold text-navy-900 mb-2">{faq.q}</h3>
                 <p className="text-gray-600">{faq.a}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
