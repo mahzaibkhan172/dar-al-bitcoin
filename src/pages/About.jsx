@@ -98,7 +98,7 @@ const About = () => {
       </section> */}
 
       {/* Values */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+      <section ref={ref} className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
