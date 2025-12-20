@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Calendar, MapPin, Clock, Users } from 'lucide-react'
+import { Calendar, MapPin, Clock, Users, Award } from 'lucide-react'
 import EventRegistrationModal from '../components/EventRegistrationModal'
 
 const Events = () => {
@@ -165,6 +165,35 @@ const Events = () => {
         onClose={closeModal}
         event={selectedEvent}
       />
+
+      {/* Host Event CTA */}
+      <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-800">
+        <div className="container-custom">
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="max-w-3xl mx-auto text-center">
+            <Award className="w-16 h-16 text-bitcoin-400 mx-auto mb-6" />
+            <h2 className="text-4xl font-outfit font-bold text-white mb-6">
+              Organiser un Événement Dar Al Bitcoin dans Votre Ville
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Vous souhaitez organiser un meetup, une conférence ou un atelier Dar Al Bitcoin dans votre ville? Contactez-nous!
+            </p>
+            <div className="bg-navy-800/50 backdrop-blur-sm border border-bitcoin-500/30 rounded-2xl p-8 mb-8">
+              <h3 className="text-xl font-bold text-white mb-4">Nous fournissons:</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>✓ Support organisationnel</li>
+                <li>✓ Matériel de formation</li>
+                <li>✓ Promotion</li>
+                <li>✓ Intervenant (si possible)</li>
+              </ul>
+            </div>
+            <a href="mailto:contact@daralbitcoin.com">
+              <motion.button whileHover={{ scale: 1.05 }} className="btn-secondary">
+                Proposer un événement
+              </motion.button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
     </div>
   )
 }

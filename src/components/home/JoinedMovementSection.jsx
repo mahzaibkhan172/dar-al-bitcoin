@@ -56,7 +56,7 @@ const JoinedMovementSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-outfit font-bold text-navy-900 mb-6">
-            Ils en parlent mieux que nous
+            Ils ont rejoint le mouvement
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Des milliers de personnes ont déjà commencé leur voyage vers la compréhension et la souveraineté financière
