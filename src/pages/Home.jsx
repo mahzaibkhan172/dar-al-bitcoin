@@ -4,7 +4,7 @@ import HeroSection from '../components/home/HeroSection'
 import ProblemSection from '../components/home/ProblemSection'
 import JoinedMovementSection from '../components/home/JoinedMovementSection'
 import BlogSection from '../components/home/BlogSection'
-import TestimonialsSection from '../components/home/TestimonialsSection'
+// import TestimonialsSection from '../components/home/TestimonialsSection'
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <ProblemSection />
       <JoinedMovementSection />
       <BlogSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
     </div>
   )
 }

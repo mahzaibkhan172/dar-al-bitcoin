@@ -474,8 +474,7 @@ const Formation = () => {
                 Formation Complète Bitcoin & Islam
               </h2>
               <div className="mb-8">
-                <span className="text-gray-400 line-through text-2xl">299€</span>
-                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-bitcoin-400 ml-4">500€</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-bitcoin-400">500€</span>
                 <p className="text-gray-300 mt-2">Offre de lancement</p>
               </div>
               <ul className="text-left space-y-3 mb-8">

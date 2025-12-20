@@ -52,10 +52,9 @@ const About = () => {
       </section>
 
       {/* Story - Image Left, Text Right */}
-      <section ref={ref} className="section-padding bg-white overflow-hidden">
+      {/* <section ref={ref} className="section-padding bg-white overflow-hidden">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left Side - Image */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +68,6 @@ const About = () => {
               />
             </motion.div>
 
-            {/* Right Side - Content */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +95,7 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Values */}
       <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
